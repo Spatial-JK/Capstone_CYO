@@ -3,8 +3,8 @@ title: "choose your own project"
 author: "John Kingsley"
 date: "2019/12/24"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 INTRODUCTION
 Video games are widely played all over the world and the industries in this area of business have tremendously grown in the past decades. Video games are electronic designed algorithm that are incorporated into a computing device which includes computers (either desktop or laptop), mobile phone or a gaming console. Video games are subdivided into mobile games and computers, which solely dependent on the platforms. In the early 80s and late 70s, there were two major markets for video games, the home and the arcade markets. The arcade market generated approximately 8 billion USD more than pop music as at 1982 drawing huge attention from investors. The video games have then grown tremendously and the games enjoyed all over the world by all class of people irrespective of their age. More so, some video games have come and gone while others still in the industry are developing modern games with the needs of the people and with the growing technologies
@@ -24,32 +24,26 @@ d The year with the highest number of sales.
 a. to see if there are relationships between sales of the regions
 b. to see if there are relationship between sales and genres in the different regions of the world
 This we can achieve through data visualization after that we can further do the following data analysis, to note observable changes in comparing the genre of a game and the platform which they are released in, to ascertain if there are any relationship between sales in the regions, genres and sales.
-KEYS TO NOTE: Name: Name of the video game
 
-Platform: Platform on which the game was released or is playable
+VARIABLES DEFINITION
+1.Name: Name of the video game
+2.Platform: Platform on which the game was released or is playable
+3.Year: Year in which the game was released
+4.Genre: Genre the game belongs to
+5.Publisher: Name of the publisher who created the game
+6.NA_Sales: Sales in North America
+7.EU_Sales: Sales in Europe
+8. JP_Sales: Sales in Japan
+9. Other_Sales: Sales in other countries
+10. Global_Sales: Global Sales
 
-Year: Year in which the game was released
-
-Genre: Genre the game belongs to
-
-Publisher: Name of the publisher who created the game
-
-NA_Sales: Sales in North America
-
-EU_Sales: Sales in Europe
-
-JP_Sales: Sales in Japan
-
-Other_Sales: Sales in other countries
-
-Global_Sales: Global Sales
 DATA
 The data for the project was obtained from (https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings/data#Video_Games_Sales_as_at_22_Dec_2016.csv) which was already in it tidy state and available for machine learning analsysis. The data provided insight on the trends of video game industrie for over 30 years in the different regions of the world and also at global perspective.
 
 EXECUIVE SUMMARY
 The analysis offered me great insight into the details of the video game industry which are widely played and enjoyed by all regions of the world regardless of age. The analysis revealed that there is a relationship between regional sales and globall. That the increase or decrease in regional sales will proportional influence global sales. And that North America regions are the highest consumers of video games followed by European Union. Similarly, Shooter, Sport and Action genres have maintained top spot in the video game industry over the years. And that DS, PS, XBOX and Wii are in the top spots of the video game industry.
 
-METHDOLOGY AND ANALYSIS
+METHDOLOGY, ANALYSIS AND RESULT
 #load packages
 ```{r}
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://cran.us.r-project.org")
@@ -74,7 +68,6 @@ library(pscl)
 #loading of dataset
 ```{r}
 VIDEOGS <- read.csv("D:/john/Videogs_2016.csv")
-VIDEOGS
 ```
 
 #data inspection
@@ -303,4 +296,35 @@ VIDEOGS %>%
   theme(legend.position = "none") +
   scale_color_viridis(discrete = TRUE)
 ```
+DISCUSSION
+The main focus of the project is to evaluate video game sales and see how changes have occurred over the decades in the industry.
+The result revealed the following,
+1. In all the regions of the world, the most popular genres according to sales are Action, sports and Shooting games.
+2. There are linear relationship between sales and Genres.
+3. There is are relationship between North America region sales and European Union region sales,Other sales and Global sales with pearson correlation values shown in the plot below. That is to say that any change in the sales of games by either genre, developer or publisher a t regional level contributes tremendously to the global sales of any of the variables. 
+
+CONCLUSION
+In conclusion, the study revealed that there is a relationship between sales. This means that increase or decrease in regional sales will result to proportional increase in global sales. 
+The study further revealed that,
+a. the popularity of Action, Sports and Shooter genres has shown tremendously growth over 20 years.
+b. DS, PS and XBOX and Wii publishers were among the top developers that have strived over the years in the industries.
+c. North America was observed as the reggion with the highest number of sales followed by European Union region.
+d. There was no change in sales with genre in the regions.
+d. The highest number of sales in past 30 years was obtained in year 2008
+e. the highest number of games produced was in 2008 with a total of 1427 games and was closely followed by the year 2007 with 1426.
+f. and video game industries have grown exponentially over the years with top publisher still in remaining in the business while the weak ones have fizzle out of the industry.
+RECOMMENDATIONS
+1. The striving platforms should consider other regions with affordable Action genres.
+The game industry will keep growing in demand with the growing population of the world and such the demand of games will grow proportional with this. To this i recommend that more developers should take advantage of the market in the nearest future.
+
+REFERENCES
+1. https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings/data#Video_Games_Sales_as_at_22_Dec_2016.csv
+
+2. https://www.kaggle.com/umeshnarayanappa/explore-video-games-sales
+http://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1972&context=cmc_theses
+
+3. https://www.kaggle.com/umeshnarayanappa/explore-video-games-sales
+
+
+4. https://rstudio-pubs-static.s3.amazonaws.com/346100_d6f3f54c8f454f918456dea6b23ce7b0.html
 
