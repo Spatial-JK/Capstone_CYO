@@ -48,6 +48,9 @@ summary(VIDEOGS$EU_Sales)
 #sales in Japan
 boxplot(VIDEOGS$JP_Sales, main="Sales in Japan", xlab="Sales", ylab="frequency", vertical = TRUE)
 summary(VIDEOGS$JP_Sales)
+#other sales
+boxplot(VIDEOGS$Other_Sales, main="Sales in Japan", xlab="Sales", ylab="frequency", vertical = TRUE)
+summary(VIDEOGS$JP_Sales)
 
 #Global sales
 boxplot(VIDEOGS$Global_Sales, main="Sales in Japan", xlab="Sales", ylab="frequency", vertical = TRUE)
