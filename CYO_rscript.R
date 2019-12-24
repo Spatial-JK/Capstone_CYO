@@ -103,3 +103,4 @@ VIDEOGS %>%
   geom_jitter(alpha = 0.6, pch = 25) +
   theme(legend.position = "none") +
   scale_color_viridis(discrete = TRUE)
+
