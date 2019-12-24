@@ -2,7 +2,9 @@
 title: "choose your own project"
 author: "John Kingsley"
 date: "2019/12/24"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 INTRODUCTION
 Video games are widely played all over the world and the industries in this area of business have tremendously grown in the past decades. Video games are electronic designed algorithm that are incorporated into a computing device which includes computers (either desktop or laptop), mobile phone or a gaming console. Video games are subdivided into mobile games and computers, which solely dependent on the platforms. In the early 80s and late 70s, there were two major markets for video games, the home and the arcade markets. The arcade market generated approximately 8 billion USD more than pop music as at 1982 drawing huge attention from investors. The video games have then grown tremendously and the games enjoyed all over the world by all class of people irrespective of their age. More so, some video games have come and gone while others still in the industry are developing modern games with the needs of the people and with the growing technologies
